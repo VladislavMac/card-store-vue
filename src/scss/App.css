@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-products {
+  width: 100vw;
+  min-height: 95vh;
+  display: flex;
+  padding: 2vw;
+  gap: 3vw;
+  flex-wrap: wrap;
+}
+.content-products-section {
+  width: 20vw;
+  height: 30vw;
+  padding: 1vw;
+  border: 0.1vw solid #cdcdcd;
+  border-radius: 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content-products-section-img {
+  width: 100%;
+  height: 15vw;
+}
+.content-products-section-img img {
+  width: 100%;
+  height: 100%;
+}
+.content-products-section-title {
+  width: 100%;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content-products-section-title h1 {
+  font-size: 15px;
+}
+.content-products-section-desc {
+  width: 100%;
+  height: 5vw;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-products-section-desc p {
+  font-size: 10px;
+}
+.content-products-section-buttons {
+  width: 100%;
+  height: 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-products-section-buttons-add {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.content-products-section-buttons-add button {
+  width: 10vw;
+  height: 3vw;
+  border: 0.1vw solid #cdcdcd;
+  border-radius: 0.5vw;
+  background-color: #92C220;
+  color: #fff;
+  font-size: 13px;
+  transition-duration: 300ms;
+}
+.content-products-section-buttons-add button:hover {
+  background-color: #fff;
+  color: #92C220;
+}
+.content-products-section-buttons-counter {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.content-products-section-buttons-counter p {
+  font-size: 14px;
+}
+.content-products-section-buttons-counter button {
+  width: 2vw;
+  height: 2vw;
+  border: 0.1vw solid #cdcdcd;
+  border-radius: 0.5vw;
+  background-color: #fff;
+  color: #92C220;
+  font-size: 13px;
+  transition-duration: 300ms;
+}
+.content-products-section-buttons-counter button:hover {
+  background-color: #92C220;
+  color: #fff;
+}/*# sourceMappingURL=App.css.map */
