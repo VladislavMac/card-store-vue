@@ -1,13 +1,13 @@
 <template>
-  <AppHeader />
+  <app-header />
   <hr>
-  <AppProducts />
+  <app-products />
 </template>
 
 <script>
 
-import AppHeader from './components/AppHeader.vue'
-import AppProducts from './components/AppProducts.vue'
+import AppHeader from './components/app-header.vue'
+import AppProducts from './components/app-products.vue'
 
 export default {
   name: 'App',
