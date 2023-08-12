@@ -1,18 +1,17 @@
 <template>
   <div class="content">
     <div class="content-products">
-      <section
-      v-for="product in products"
-      :key="product.name"
-      class="content-products-section">
-        <products-section
-        :product="product"
+      <products-section
 
-        @reduceCount   = "( product.count > 0 ) ? product.count-- : false"
-        @increaseCount = "( product.count < 99 ) ? product.count++ : false"
-        
-        />
-      </section>
+      v-for="product in products"
+
+      :key="product.name"
+      :product="product"
+
+      @reduceCount   = "( product.count > 0 ) ? product.count-- : false"
+      @increaseCount = "( product.count < 99 ) ? product.count++ : false"
+
+      />
     </div>
   </div>
 </template>
