@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background-color: #111;
+}
+
+hr {
+  background-color: #92C220;
+  border: none;
+  height: 0.3vh;
+}/*# sourceMappingURL=App.css.map */

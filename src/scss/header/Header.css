@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Teko", sans-serif;
+  background-color: #111;
+}
+.header-nav {
+  width: 80vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav-logo {
+  width: 20vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.header-nav-logo h1 {
+  color: #92C220;
+  font-weight: normal;
+  font-size: 4vw;
+  transition-duration: 300ms;
+}
+.header-nav-logo h1:hover {
+  color: #cdcdcd;
+}/*# sourceMappingURL=Header.css.map */

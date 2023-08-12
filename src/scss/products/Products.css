@@ -1,24 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
 .content {
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  font-family: "Teko", sans-serif;
 }
 .content-products {
   width: 100vw;
   min-height: 95vh;
   display: flex;
   padding: 2vw;
-  gap: 3vw;
+  gap: 4vw;
   flex-wrap: wrap;
 }
 .content-products-section {
@@ -26,15 +20,18 @@
   height: 30vw;
   padding: 1vw;
   border: 0.1vw solid #cdcdcd;
+  background-color: #fff;
   border-radius: 0.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition-duration: 300ms;
 }
 .content-products-section-img {
   width: 100%;
   height: 15vw;
+  cursor: pointer;
 }
 .content-products-section-img img {
   width: 100%;
@@ -47,9 +44,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
+  transition-duration: 300ms;
 }
 .content-products-section-title h1 {
-  font-size: 15px;
+  font-size: 2.2vw;
 }
 .content-products-section-desc {
   width: 100%;
@@ -58,9 +57,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 .content-products-section-desc p {
-  font-size: 10px;
+  font-size: 1vw;
 }
 .content-products-section-buttons {
   width: 100%;
@@ -68,6 +68,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 .content-products-section-buttons-add {
   width: 60%;
@@ -83,8 +84,9 @@
   border-radius: 0.5vw;
   background-color: #92C220;
   color: #fff;
-  font-size: 13px;
+  font-size: 1.3vw;
   transition-duration: 300ms;
+  cursor: pointer;
 }
 .content-products-section-buttons-add button:hover {
   background-color: #fff;
@@ -99,7 +101,7 @@
   text-align: center;
 }
 .content-products-section-buttons-counter p {
-  font-size: 14px;
+  font-size: 1.4vw;
 }
 .content-products-section-buttons-counter button {
   width: 2vw;
@@ -108,10 +110,14 @@
   border-radius: 0.5vw;
   background-color: #fff;
   color: #92C220;
-  font-size: 13px;
+  font-size: 1.3vw;
   transition-duration: 300ms;
+  cursor: pointer;
 }
 .content-products-section-buttons-counter button:hover {
   background-color: #92C220;
   color: #fff;
-}/*# sourceMappingURL=App.css.map */
+}
+.content-products-section:hover {
+  border: 0.1vw solid #92C220;
+}/*# sourceMappingURL=Products.css.map */

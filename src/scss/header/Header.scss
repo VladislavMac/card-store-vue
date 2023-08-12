@@ -1,0 +1,41 @@
+$green : #92C220;
+$grey  : #cdcdcd;
+
+.header{
+    width: 100%; height: 15vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Teko', sans-serif;
+
+    background-color: #111;
+
+    &-nav{
+        width: 80vw; height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-logo{
+            width: 20vw; height: 100%   ;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+            h1{
+                color: $green;
+                font-weight: normal;
+                font-size: 4vw;
+
+                transition-duration: 300ms;
+            }
+            h1:hover{
+                color: #cdcdcd;
+            }
+        }
+    }
+}

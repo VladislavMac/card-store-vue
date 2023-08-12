@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  name: 'ContentProducts',
+  name: 'AppProducts',
   data() {
     return{
         products : [
@@ -129,3 +129,5 @@ export default {
 //  msg: String
 // }
 </script>
+
+<style src="../scss/products/Products.css" scoped></style>

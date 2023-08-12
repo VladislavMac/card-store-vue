@@ -1,15 +1,19 @@
 <template>
-  <ContentProducts />
+  <AppHeader />
+  <hr>
+  <AppProducts />
 </template>
 
 <script>
 
-import ContentProducts from './components/ContentProducts.vue'
+import AppHeader from './components/AppHeader.vue'
+import AppProducts from './components/AppProducts.vue'
 
 export default {
   name: 'App',
   components: {
-    ContentProducts
+    AppHeader,
+    AppProducts,
   },
   data() {
     return{
@@ -22,7 +26,7 @@ export default {
 }
 </script>
 
-<style src="./scss/App.css"></style>
+<style src="./scss/app/App.css"></style>
 
 <!-- <template>
   <img alt="Vue logo" src="./assets/logo.png">
