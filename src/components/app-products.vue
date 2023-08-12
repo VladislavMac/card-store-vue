@@ -4,10 +4,13 @@
       <section
       v-for="product in products"
       :key="product.name"
-
       class="content-products-section">
         <products-section
-          :product="product"
+        :product="product"
+
+        @reduceCount   = "( product.count > 0 ) ? product.count-- : false"
+        @increaseCount = "( product.count < 99 ) ? product.count++ : false"
+        
         />
       </section>
     </div>

@@ -19,6 +19,7 @@
         </div>
         <div class="content-products-section-buttons-counter">
             <button 
+            @click="$emit('reduceCount')"
             class="content-products-section-buttons-counter_button">-</button>
 
             <p class="content-products-section-buttons-counter_out">
@@ -26,6 +27,7 @@
             </p>
 
             <button 
+            @click="$emit('increaseCount')"
             class="content-products-section-buttons-counter_button">+</button>
         </div>
     </div>
@@ -35,8 +37,12 @@
     export default {
         name: 'products-section',
         props : {
-            product : Object
+            product : Object,
         },
+        emits : [
+            'reduceCount',
+            'increaseCount',
+        ],
         data() {
             return{
             }
