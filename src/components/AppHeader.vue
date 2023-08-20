@@ -13,19 +13,6 @@
     </header>
 </template>
   
-<script>
-export default {
-  name: 'app-header',
-  data() {
-    return{
-    }
-  }
-}
-// props: {
-//  msg: String
-// }
-</script>
-
 <style src="../scss/header/Header.css" scoped></style>
   
   

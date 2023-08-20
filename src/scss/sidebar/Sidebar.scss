@@ -1,0 +1,244 @@
+$green : #92C220;
+$grey  : #cdcdcd;
+
+.sidebar{
+    max-height: 100vh;
+
+    background-color: #fff;
+    border: 0.1vw solid $grey;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    transition-duration: 300ms;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &-button{
+        width: 4vw;
+        height: 4vw;
+
+        position: fixed;
+        
+        top: 0.5vw;
+        right: 2vw;
+
+        &_button{
+            width: 100%;
+            height: 100%;
+
+            background-color: #fff;
+            color: $green;
+            border: 0.1vw solid $green;
+
+            font-size: 1.3vw;
+
+            border-radius: 0.5vw;
+
+            transition-duration: 300ms;
+            cursor: pointer;
+        }
+        &_button:hover{
+            background-color: $green;
+            color: #fff;
+            border: 0.1vw solid $grey;
+
+        } 
+    }
+    &-content{
+        width: 100%;
+
+        padding: 2vw;
+        font-family: 'Roboto', sans-serif;
+        &-list{
+            width: 100%;
+
+            margin: 4vw 0 3vw 0;
+
+            min-height: 10vh;
+            max-height: 70vh;
+
+            overflow-y: auto;
+
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+
+            list-style: none;
+
+            gap: 1vw;
+
+            &_item{
+                width: 100%;
+                min-height: 15vh;
+
+                // border: 0.1vw solid $grey;
+
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                &-img{
+                    width: 10vw;
+                    height: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &-title{
+                    width: 15vw;
+                    height: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1{
+                        font-size: 1.5vw;
+                    }
+                }
+                &-price{
+                    width: 13vw;
+                    height: 10vh;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &-counter{
+                        width: 15vw;
+                        height: 100%;
+                        
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        text-align: center;
+    
+                        p{
+                            font-size: 1.4vw;
+                        }
+                    
+                        button{
+                            width: 2vw;
+                            height: 2vw;
+        
+                            border: 0.1vw solid $grey;
+                            border-radius: 0.5vw;
+                            
+                            background-color: #fff;
+                            color: $green;
+    
+                            font-size: 1.3vw;
+        
+                            transition-duration: 300ms;
+                            cursor: pointer;
+                        }
+                        button:hover{
+                            background-color: $green;
+                            color: #fff;
+                        }
+                    }
+                    &-price{
+                        width: 100%;   
+                        height: 100%;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    
+                        p{
+                            font-size: 1.3vw;
+                            span{
+                                color: $green;  
+                            }
+                        }
+                    }
+                }
+                &-button{
+                    width: 5vw;
+                    height: 10vh;
+
+                    display: flex;
+                    justify-content: end;
+                    align-items: flex-start;
+
+                    button{
+                        color: $grey;
+                        font-size: 2vw;
+
+                        border: none;
+                        background: none;
+                    }
+                }
+            }
+        }
+        &-pay{
+            width: 100%;
+            height: 8vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &-price{
+                width: 100%;
+                height: 50%;
+
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                margin-left: 1vw;
+                p{
+                    font-size: 1.5vw;
+                    span{
+                        font-weight: bold;
+                        color: #92C220;
+                    }
+                }
+            }
+            &-button{
+                width: 100%;
+                height: 50%;
+
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                button{
+                    width: 15vw;
+                    height: 4vw;
+
+                    background-color: $green;
+        
+                    color: #fff;
+                    font-size: 1.5vw;
+        
+                    border: 0.1vw solid $grey;
+                    border-radius: 0.5vw;
+        
+                    transition-duration: 300ms;
+                    cursor: pointer;
+                }
+                button:hover{
+                    background-color: #fff;
+                    color: $green;
+                    border: 0.1vw solid $green;
+                }
+            }
+        }
+    }
+}

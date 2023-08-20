@@ -80,17 +80,18 @@
 .content-products-section-buttons-add button {
   width: 10vw;
   height: 3vw;
-  border: 0.1vw solid #cdcdcd;
-  border-radius: 0.5vw;
   background-color: #92C220;
   color: #fff;
   font-size: 1.3vw;
+  border: 0.1vw solid #cdcdcd;
+  border-radius: 0.5vw;
   transition-duration: 300ms;
   cursor: pointer;
 }
 .content-products-section-buttons-add button:hover {
   background-color: #fff;
   color: #92C220;
+  border: 0.1vw solid #92C220;
 }
 .content-products-section-buttons-counter {
   width: 40%;

@@ -37,7 +37,7 @@
   
 <script>
     export default {
-        name: 'products-section',
+        name: 'ProductsSection',
         props : {
             product : Object,
         },

@@ -1,4 +1,5 @@
 <template>
+  <app-sidebar itemsBuy="itemsBuy"/>
   <app-header />
   <hr>
   <app-products />
@@ -6,23 +7,24 @@
 
 <script>
 
-import AppHeader from './components/app-header.vue'
-import AppProducts from './components/app-products.vue'
+import AppHeader from './components/AppHeader.vue'
+import AppProducts from './components/AppProducts.vue'
+import AppSidebar from './components/AppSidebar.vue'
 
 export default {
   name: 'App',
   components: {
     AppHeader,
     AppProducts,
+    AppSidebar,
   },
   data() {
     return{
-
+      itemsBuy : []
     }
   },
   methods : {
   }
-
 }
 </script>
 
