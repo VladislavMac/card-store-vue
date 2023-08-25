@@ -122,7 +122,7 @@ $grey  : #cdcdcd;
                         border: 0.1vw solid $green;
                     }
                 }
-                &-counter{
+                &-price{
                     width: 40%;
                     height: 100%;
                     
@@ -135,25 +135,25 @@ $grey  : #cdcdcd;
                         font-size: 1.4vw;
                     }
                 
-                    button{
-                        width: 2vw;
-                        height: 2vw;
+                    // button{
+                    //     width: 2vw;
+                    //     height: 2vw;
     
-                        border: 0.1vw solid $grey;
-                        border-radius: 0.5vw;
+                    //     border: 0.1vw solid $grey;
+                    //     border-radius: 0.5vw;
                         
-                        background-color: #fff;
-                        color: $green;
+                    //     background-color: #fff;
+                    //     color: $green;
 
-                        font-size: 1.3vw;
+                    //     font-size: 1.3vw;
     
-                        transition-duration: 300ms;
-                        cursor: pointer;
-                    }
-                    button:hover{
-                        background-color: $green;
-                        color: #fff;
-                    }
+                    //     transition-duration: 300ms;
+                    //     cursor: pointer;
+                    // }
+                    // button:hover{
+                    //     background-color: $green;
+                    //     color: #fff;
+                    // }
                 }
             }
         }

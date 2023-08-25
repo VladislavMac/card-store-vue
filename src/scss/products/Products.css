@@ -93,7 +93,7 @@
   color: #92C220;
   border: 0.1vw solid #92C220;
 }
-.content-products-section-buttons-counter {
+.content-products-section-buttons-price {
   width: 40%;
   height: 100%;
   display: flex;
@@ -101,23 +101,8 @@
   align-items: center;
   text-align: center;
 }
-.content-products-section-buttons-counter p {
+.content-products-section-buttons-price p {
   font-size: 1.4vw;
-}
-.content-products-section-buttons-counter button {
-  width: 2vw;
-  height: 2vw;
-  border: 0.1vw solid #cdcdcd;
-  border-radius: 0.5vw;
-  background-color: #fff;
-  color: #92C220;
-  font-size: 1.3vw;
-  transition-duration: 300ms;
-  cursor: pointer;
-}
-.content-products-section-buttons-counter button:hover {
-  background-color: #92C220;
-  color: #fff;
 }
 .content-products-section:hover {
   border: 0.1vw solid #92C220;

@@ -16,20 +16,13 @@
         <div class="content-products-section-buttons">
             <div class="content-products-section-buttons-add">
                 <button
+                @click="$emit('setWantedProduct', product)"
                 class="content-products-section-buttons-add_button">В корзину</button>
             </div>
-            <div class="content-products-section-buttons-counter">
-                <button 
-                @click="$emit('reduceCount')"
-                class="content-products-section-buttons-counter_button">-</button>
-
-                <p class="content-products-section-buttons-counter_out">
-                {{ product.count }}
+            <div class="content-products-section-buttons-price">
+                <p class="content-products-section-buttons-price_price">
+                    ${{ product.money }}
                 </p>
-
-                <button 
-                @click="$emit('increaseCount')"
-                class="content-products-section-buttons-counter_button">+</button>
             </div>
         </div>
     </section>
