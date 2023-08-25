@@ -3,7 +3,8 @@
     :style="{
         width: sidebarWidth + 'vw' 
     }"
-    class="sidebar">
+    class="sidebar"
+    >
         <div class="sidebar-button">
             <button 
             v-if="sidebarOpen"
@@ -11,7 +12,8 @@
                 sidebarOpen = false, 
                 sidebarWidth = 0
             "
-            class="sidebar-button_button">
+            class="sidebar-button_button"
+            >
                 x
             </button>
 
@@ -21,7 +23,8 @@
                 sidebarOpen = true, 
                 sidebarWidth = 50
             "
-            class="sidebar-button_button">
+            class="sidebar-button_button"
+            >
                 +
             </button>
         </div>

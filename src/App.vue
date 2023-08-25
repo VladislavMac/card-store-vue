@@ -1,35 +1,35 @@
 <template>
   <app-sidebar>
     <sidebar-product
-    v-for="wantedProduct in wantedProducts"
-    
-    :key="wantedProduct.id"
-    :wantedProduct="wantedProduct"
+      v-for="wantedProduct in wantedProducts"
+      
+      :key="wantedProduct.id"
+      :wantedProduct="wantedProduct"
+      @removeWantedProduct="removeProduct(wantedProduct)"
     />
   </app-sidebar>
   <app-header />
-
   <hr>
-  
   <app-products :products="products">
     <products-section
-    v-for="product in products"
+      v-for="product in products"
 
-    :key="product.id"
-    :product="product"
+      :key="product.id"
+      :product="product"
 
-    @setWantedProduct="wantedProducts.push(product)"
+      @addWantedProduct="wantedProducts.push(product)"
     />
   </app-products>
 </template>
 
 <script>
 
+import AppSidebar from './components/AppSidebar.vue'
+import SidebarProduct from './components/SidebarProduct.vue'
 import AppHeader from './components/AppHeader.vue'
 import AppProducts from './components/AppProducts.vue'
 import ProductsSection from './components/ProductsSection.vue'
-import AppSidebar from './components/AppSidebar.vue'
-import SidebarProduct from './components/SidebarProduct.vue'
+
 
 export default {
   name: 'App',
@@ -41,7 +41,9 @@ export default {
     SidebarProduct
   },
   methods :{
-
+    removeProduct(product){
+      this.wantedProducts.splice(this.wantedProducts.indexOf(this.wantedProducts.filter((wantedProduct) => wantedProduct.id === product.id )[0]), 1)
+    },
   },
   data() {
     return{

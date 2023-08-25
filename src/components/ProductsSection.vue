@@ -16,7 +16,7 @@
         <div class="content-products-section-buttons">
             <div class="content-products-section-buttons-add">
                 <button
-                @click="$emit('setWantedProduct', product)"
+                @click="$emit('addWantedProduct', product)"
                 class="content-products-section-buttons-add_button">В корзину</button>
             </div>
             <div class="content-products-section-buttons-price">
@@ -35,8 +35,7 @@
             product : Object,
         },
         emits : [
-            'reduceCount',
-            'increaseCount',
+            'addWantedProduct'
         ],
         data() {
             return{

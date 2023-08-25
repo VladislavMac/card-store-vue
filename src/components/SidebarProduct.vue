@@ -36,7 +36,9 @@
         </div>
     </div>
     <div class="sidebar-content-list_item-button">
-        <button class="sidebar-content-list_item-button_button">
+        <button
+        @click="$emit('removeWantedProduct', wantedProduct)"
+        class="sidebar-content-list_item-button_button">
             x
         </button>
     </div>
