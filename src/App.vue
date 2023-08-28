@@ -1,11 +1,13 @@
 <template>
-  <app-sidebar>
+  <app-sidebar
+  :wantedProductsPrice="wantedProductsPrice"
+  >
     <sidebar-product
       v-for="wantedProduct in wantedProducts"
       
       :key="wantedProduct.id"
       :wantedProduct="wantedProduct"
-      @removeWantedProduct="removeProduct(wantedProduct)"
+      @removeWantedProduct="removeWantedProduct(wantedProduct)"
     />
   </app-sidebar>
   <app-header />
@@ -17,7 +19,7 @@
       :key="product.id"
       :product="product"
 
-      @addWantedProduct="wantedProducts.push(product)"
+      @addWantedProduct="addWantedProduct(product)"
     />
   </app-products>
 </template>
@@ -44,10 +46,19 @@ export default {
     removeProduct(product){
       this.wantedProducts.splice(this.wantedProducts.indexOf(this.wantedProducts.filter((wantedProduct) => wantedProduct.id === product.id )[0]), 1)
     },
+    removeWantedProduct(product){
+      this.removeProduct(product) 
+      this.wantedProductsPrice -= product.money
+    },
+    addWantedProduct(product){
+      this.wantedProducts.push(product) 
+      this.wantedProductsPrice += product.money
+    }
   },
   data() {
     return{
       wantedProducts : [],
+      wantedProductsPrice : 0,
       products : [
         {
           id : 0,

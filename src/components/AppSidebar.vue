@@ -36,10 +36,18 @@
             <hr>
             <div class="sidebar-content-pay">
                 <div class="sidebar-content-pay-price">
-                    <p class="sidebar-content-pay-price_price">К оплате: <span>$2831</span></p>
+                    <p 
+                    class="sidebar-content-pay-price_price"
+                    >
+                        К оплате: <span>${{ wantedProductsPrice }}</span>
+                    </p>
                 </div>
                 <div class="sidebar-content-pay-button">
-                    <button class="sidebar-content-pay-button_button">Оформить заказ</button>
+                    <button 
+                    class="sidebar-content-pay-button_button"
+                    >
+                        Оформить заказ
+                    </button>
                 </div>
             </div>
         </div>
@@ -50,12 +58,15 @@
 
 export default {
     name : 'app-sidebar',
+    props : {
+        wantedProductsPrice : Number
+    },
     data(){
         return{
             sidebarWidth : 0,
-            sidebarOpen : false
+            sidebarOpen : false,
         }
-    }
+    },
 }
 </script>
 
