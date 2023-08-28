@@ -3,12 +3,12 @@
     <div class="sidebar-content-list_item-img">
         <img
         :src=" wantedProduct.img " 
-        :alt=" wantedProduct.name "
+        :alt=" wantedProduct.title "
         class="sidebar-content-list_item-img_img">
     </div>
     <div class="sidebar-content-list_item-title">
         <h1 class="sidebar-content-list_item-title_title">
-            {{ wantedProduct.name }}
+            {{ wantedProduct.title }}
         </h1>
     </div>
     <div class="sidebar-content-list_item-price">
@@ -31,14 +31,15 @@
         </div>
         <div class="sidebar-content-list_item-price-price">
             <p class="sidebar-content-list_item-price-price_p">
-                x <span>${{ wantedProduct.money }}</span>
+                x <span>${{ wantedProduct.price }}</span>
             </p>
         </div>
     </div>
     <div class="sidebar-content-list_item-button">
         <button
         @click="$emit('removeWantedProduct', wantedProduct)"
-        class="sidebar-content-list_item-button_button">
+        class="sidebar-content-list_item-button_button"
+        >
             x
         </button>
     </div>

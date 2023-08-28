@@ -6,7 +6,7 @@
             alt="">
         </div>
         <div class="content-products-section-title">
-            <h1 class="content-products-section-title_title">{{ product.name }}</h1>
+            <h1 class="content-products-section-title_title">{{ product.title }}</h1>
         </div>
         <div class="content-products-section-desc">
             <p class="content-products-section-desc_desc">
@@ -17,11 +17,14 @@
             <div class="content-products-section-buttons-add">
                 <button
                 @click="$emit('addWantedProduct', product)"
-                class="content-products-section-buttons-add_button">В корзину</button>
+                class="content-products-section-buttons-add_button"
+                >
+                    В корзину
+                </button>
             </div>
             <div class="content-products-section-buttons-price">
                 <p class="content-products-section-buttons-price_price">
-                    ${{ product.money }}
+                    ${{ product.price }}
                 </p>
             </div>
         </div>
