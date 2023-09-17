@@ -50,10 +50,22 @@ export default {
     removeWantedProduct(product){
       this.removeProduct(product) 
       this.wantedProductsPrice -= product.price
+      product.count--
     },
     addWantedProduct(product){
+      for( let key in this.wantedProducts ){
+        if( this.wantedProducts[key].id === product.id ){
+          this.wantedProductsPrice += product.price
+          product.count++
+
+          return;
+        }
+      }
+
       this.wantedProducts.push(product) 
       this.wantedProductsPrice += product.price
+      
+      product.count++
     }
   },
   data() {
@@ -67,7 +79,7 @@ export default {
           img : 'https://ir.ozone.ru/s3/multimedia-f/c1000/6303134703.jpg',
           desc : 'GeForce GTX 1050 2GB GDDR5 128bit (GV-N1050D5-2GD)',
           count : 0,
-          price : 2153
+          price : 2321
         },
         {
           id : 1,

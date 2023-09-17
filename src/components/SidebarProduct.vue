@@ -14,18 +14,20 @@
     <div class="sidebar-content-list_item-price">
         <div class="sidebar-content-list_item-price-counter">
             <button 
-            @click="$emit('reduceCount')"
-            class="sidebar-content-list_item-price-counter_button">
+            @click="$emit('reduceCountWantedProduct')"
+            class="sidebar-content-list_item-price-counter_button"
+            >
                 -
             </button>
 
             <p class="sidebar-content-list_item-price-counter_out">
-                1
+                {{ wantedProduct.count }}
             </p>
 
             <button 
-            @click="$emit('increaseCount')"
-            class="sidebar-content-list_item-price-counter_button">
+            @click="$emit('increaseCountWantedProduct')"
+            class="sidebar-content-list_item-price-counter_button"
+            >
                 +
             </button>
         </div>
@@ -52,6 +54,10 @@ export default {
     props : {
         wantedProduct : Array
     },
+    data(){
+        return{
+        }
+    }
 }
 
 </script>

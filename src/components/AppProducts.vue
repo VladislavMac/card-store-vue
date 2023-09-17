@@ -9,6 +9,7 @@
 <script>
   // @reduceCount      = "( product.count > 0 )  ? product.count-- : false" 
   // @increaseCount    = "( product.count < 99 ) ? product.count++ : false"
+  
   export default {
     name: 'AppProducts',
     props : {
