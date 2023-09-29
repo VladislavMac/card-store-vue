@@ -1,6 +1,6 @@
 <template>
   <app-sidebar
-    :wantedProductsPrice="wantedProductsPrice"
+  :wantedProductsPrice="wantedProductsPrice"
   >
     <sidebar-product
       v-for="wantedProduct in wantedProducts"
@@ -11,9 +11,14 @@
       @removeWantedProduct="removeWantedProduct(wantedProduct)"
     />
   </app-sidebar>
+
   <app-header />
+
   <hr>
-  <app-products :products="products">
+
+  <app-products 
+  :products="products"
+  >
     <products-section
       v-for="product in products"
 
@@ -33,7 +38,6 @@ import AppHeader from './components/AppHeader.vue'
 import AppProducts from './components/AppProducts.vue'
 import ProductsSection from './components/ProductsSection.vue'
 
-
 export default {
   name: 'App',
   components: {
@@ -48,24 +52,34 @@ export default {
       this.wantedProducts.splice(this.wantedProducts.indexOf(this.wantedProducts.filter((wantedProduct) => wantedProduct.id === product.id )[0]), 1)
     },
     removeWantedProduct(product){
+      product.count = 0
+      this.setWantedProductsPrice()
       this.removeProduct(product) 
-      this.wantedProductsPrice -= product.price
-      product.count--
     },
     addWantedProduct(product){
       for( let key in this.wantedProducts ){
         if( this.wantedProducts[key].id === product.id ){
-          this.wantedProductsPrice += product.price
           product.count++
 
+          this.setWantedProductsPrice();
           return;
         }
       }
 
       this.wantedProducts.push(product) 
-      this.wantedProductsPrice += product.price
-      
       product.count++
+
+      this.setWantedProductsPrice();
+    },
+    setWantedProductsPrice(){
+      let price = 0;
+
+      for( let key in this.wantedProducts ){
+        let product = this.wantedProducts[key];
+        price += product.count * product.price;
+      }
+
+      this.wantedProductsPrice = price;
     }
   },
   data() {

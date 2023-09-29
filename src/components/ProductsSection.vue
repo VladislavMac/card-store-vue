@@ -3,7 +3,8 @@
         <div class="content-products-section-img">
             <img
             :src="product.img"
-            alt="product.title">
+            alt="product.title"
+            >
         </div>
         <div class="content-products-section-title">
             <h1 class="content-products-section-title_title">
