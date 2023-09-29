@@ -8,7 +8,9 @@
       :key="wantedProduct.id"
       :wantedProduct="wantedProduct"
 
-      @removeWantedProduct="removeWantedProduct(wantedProduct)"
+      @removeWantedProduct        = "removeWantedProduct(wantedProduct)"
+      @increaseCountWantedProduct = "increaseCountWantedProduct(wantedProduct)"
+      @reduceCountWantedProduct   = "reduceCountWantedProduct(wantedProduct)"
     />
   </app-sidebar>
 
@@ -48,6 +50,20 @@ export default {
     SidebarProduct
   },
   methods :{
+    increaseCountWantedProduct(product){
+      if( product.count < 99 ){
+        product.count++
+
+        this.setWantedProductsPrice();
+      }
+    },
+    reduceCountWantedProduct(product){
+      if( product.count > 1 ){
+        product.count--
+
+        this.setWantedProductsPrice();
+      }
+    },
     removeProduct(product){
       this.wantedProducts.splice(this.wantedProducts.indexOf(this.wantedProducts.filter((wantedProduct) => wantedProduct.id === product.id )[0]), 1)
     },
